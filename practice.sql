@@ -65,3 +65,13 @@ CREATE TABLE IF NOT EXISTS player_stats (
     FOREIGN KEY (player_id)  REFERENCES player(player_id)  ON DELETE CASCADE,
     UNIQUE (fixture_id, player_id)   -- one stat row per player per match
 );
+
+SELECT * FROM league;
+SELECT t.name, t.home_ground
+FROM team t
+JOIN league l ON t.league_id = l.league_id
+WHERE l.name = 'Premier League';
+SELECT p.name, p.position, p.status
+FROM player p
+JOIN team t ON p.team_id = t.team_id
+WHERE t.name = 'FC Barcelona';
