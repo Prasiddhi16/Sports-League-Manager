@@ -7,6 +7,7 @@ CREATE TABLE IF NOT EXISTS league (
     sport VARCHAR(50) NOT NULL DEFAULT 'Football' ,
     season_year INT
 );
+-- the sql creation now requires the addidtion of queries and joins
 
 CREATE TABLE IF NOT EXISTS team (
     team_id INT AUTO_INCREMENT PRIMARY KEY,
